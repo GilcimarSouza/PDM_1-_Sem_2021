@@ -1,19 +1,52 @@
 <resources>
-    <string name="app_name">NetFlics</string>
+    <string name="app_name">foodie_app</string>
 
-    <!-- Onboarding -->
-    <string name="start_button">Vamos lá</string>
-    <string name="onboarding_first_page_title">Filmes, séries e muito mais, sem limites</string>
-    <string name="onboarding_first_page_subtitle">Assista onde quiser. Cancele quando quiser</string>
+    <string name="app_motto">Compartilhe seus Sonhos</string>
 
-    <string name="onboarding_second_page_title">Baixe e assista offline</string>
-    <string name="onboarding_second_page_subtitle">Tenha sempre algo para assistir offline.</string>
+    <string name="title_onboarding_1">Ache receitas de culinário do mundo inteiro</string>
+    <string name="title_onboarding_2">Crie uma comunidade com amantes de comida de todo lugar</string>
+    <string name="title_onboarding_3">Registre AQUELA receita que deu super certo</string>
 
-    <string name="onboarding_third_page_title">Sem compromisso</string>
-    <string name="onboarding_third_page_subtitle">Assine hoje, cancele quando quiser.</string>
+    <!-- DESCRIÇÕES DOS ELEMENTOS -->
+    <string name="desc_bg_splash">Plano de fundo da Splashscreen </string>
+    <string name="desc_logo_splash">Logomarca na Splashscreen</string>
 
-    <string name="onboarding_privacy">Privacidade</string>
-    <string name="onboarding_faq">Perguntas Frequentes</string>
+    <string name="desc_bg_login">Plano de fundo da tela de login</string>
+    <string name="desc_logo_login">Logomarca na tela de login</string>
 
+    <string name="desc_bg_cadastro">Plano de fundo da tela de cadastro</string>
+
+    <string name="desc_bg_reset">Plano de fundo da tela de resta senha</string>
+
+    <!-- FIM DA DESCRIÇÃO DOS ELEMENTOS -->
+
+    <!--HINTS -->
+    <string name="hint_login">Login</string>
+    <string name="hint_password">Senha</string>
+
+    <string name="hint_nome_cadastro">Nome</string>
+    <string name="hint_sobrenome_cadastro">Sobrenome</string>
+    <string name="hint_email_cadastro">e-mail</string>
+    <string name="hint_telefone_cadastro">Telefone</string>
+    <string name="hint_password_cadastro">Senha</string>
+    <string name="hint_confirm_password_cadastro">Confirmar Senha</string>
+
+    <string name="hint_email_reset">e-mail cadastrado</string>
+    <!-- FIM DAS HINTS-->
+
+    <!-- BOTÕES -->
+    <string name="bt_login_enter">Entrar</string>
+    <string name="bt_login_cadastrar">Cadastrar</string>
+    <string name="bt_login_esqueci_senha">Esqueci a Senha</string>
+
+    <string name="bt_confirmar_cadastro">Confirmar</string>
+    <string name="bt_cadastro_voltar">Voltar</string>
+
+    <string name="bt_send_reset">Enviar</string>
+    <string name="bt_voltar_reset">Voltar</string>
+
+    <string name="bt_go_onboard">Vamos lá</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
