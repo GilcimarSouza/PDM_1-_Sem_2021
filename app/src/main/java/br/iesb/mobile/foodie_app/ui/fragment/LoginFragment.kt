@@ -7,7 +7,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 import br.iesb.mobile.foodie_app.R
+import br.iesb.mobile.foodie_app.databinding.FragmentLoginBinding
+import br.iesb.mobile.foodie_app.ui.activity.AppActivity
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.fragment_login.*
@@ -15,24 +18,26 @@ import kotlinx.android.synthetic.main.fragment_login.*
 
 class LoginFragment : Fragment() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
+    private lateinit var binding:FragmentLoginBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_login, container, false)
+
+        binding = FragmentLoginBinding.inflate(inflater, container, false)
+        binding.lifecycleOwner = this
+
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         bt_cadastrar.setOnClickListener {
-            startActivity(Intent(this, CadastroActivity::class.java))
+            //startActivity(Intent(this, CadastroActivity::class.java))
+            findNavController().navigate(R.id.action_loginFragment_to_cadastroFragment)
         }
 
         bt_enter.setOnClickListener {
@@ -48,7 +53,8 @@ class LoginFragment : Fragment() {
 
                 taskDeLogin.addOnCompleteListener() { resultado ->
                     if (resultado.isSuccessful) {
-                        startActivity(Intent(this, HomeActivity::class.java))
+                        startActivity(Intent(activity, AppActivity::class.java))
+                        //activity?.finish()
                     } else {
                         Toast.makeText(activity, "Erro ao efetuar login!", Toast.LENGTH_LONG).show()
                     }
@@ -58,7 +64,8 @@ class LoginFragment : Fragment() {
         }
 
         bt_forgot_password.setOnClickListener {
-            startActivity(Intent(this, ResetpasswordActivity::class.java))
+            //startActivity(Intent(this, ResetpasswordActivity::class.java))
+            findNavController().navigate(R.id.action_loginFragment_to_forgotFragment)
         }
     }
 

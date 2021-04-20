@@ -6,22 +6,25 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 import br.iesb.mobile.foodie_app.R
+import br.iesb.mobile.foodie_app.databinding.FragmentForgotBinding
 import com.google.firebase.auth.FirebaseAuth
-import kotlinx.android.synthetic.main.activity_resetpassword.*
+import kotlinx.android.synthetic.main.fragment_forgot.*
 
 class ForgotFragment : Fragment() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
+    private lateinit var binding: FragmentForgotBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_forgot, container, false)
+        binding = FragmentForgotBinding.inflate(inflater, container, false)
+        binding.lifecycleOwner = this
+
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -32,7 +35,7 @@ class ForgotFragment : Fragment() {
         }
 
         bt_voltar_reset.setOnClickListener {
-            activity?.finish()
+            findNavController().navigate(R.id.action_forgotFragment_to_loginFragment)
         }
     }
     private fun sendReset() {
