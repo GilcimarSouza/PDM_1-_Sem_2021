@@ -13,8 +13,8 @@
         android:id="@+id/tv_email_cadstro"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:backgroundTint="#A66767"
-        android:foregroundTint="#9A2727">
+        tools:context=".ui.fragment.CadastroFragment"
+       >
 
         <ImageView
             android:id="@+id/im_bg_cadastro"

@@ -6,20 +6,27 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 import br.iesb.mobile.foodie_app.R
+import br.iesb.mobile.foodie_app.databinding.FragmentCadastroBinding
 import com.google.firebase.auth.FirebaseAuth
-import kotlinx.android.synthetic.main.activity_cadastro.*
+import kotlinx.android.synthetic.main.fragment_cadastro.*
 
 class CadastroFragment : Fragment() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
+    private lateinit var binding: FragmentCadastroBinding
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+
+    override fun onCreateView(
+            inflater: LayoutInflater,
+            container: ViewGroup?,
+            savedInstanceState: Bundle?
+    ): View {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_cadastro, container, false)
+        binding = FragmentCadastroBinding.inflate(inflater, container, false)
+        binding.lifecycleOwner = this
+
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -30,7 +37,7 @@ class CadastroFragment : Fragment() {
         }
 
         bt_cadastro_voltar.setOnClickListener {
-            activity?.finish()
+            findNavController().navigate(R.id.action_cadastroFragment_to_loginFragment)
         }
     }
 

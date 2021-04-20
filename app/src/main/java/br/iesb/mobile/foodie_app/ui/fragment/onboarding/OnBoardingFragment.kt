@@ -5,12 +5,14 @@
     import android.view.LayoutInflater
     import android.view.View
     import android.view.ViewGroup
-    import androidx.fragment.app.FragmentManager
-    import androidx.lifecycle.Lifecycle
-    import androidx.viewpager2.adapter.FragmentStateAdapter
+    import androidx.navigation.fragment.findNavController
+    import br.iesb.mobile.foodie_app.R
     import br.iesb.mobile.foodie_app.databinding.FragmentOnBoardingBinding
     import br.iesb.mobile.foodie_app.ui.fragment.onboarding.screen.OnboardingFirstFragment
     import br.iesb.mobile.foodie_app.ui.fragment.onboarding.screen.OnboardingSecondFragment
+    import br.iesb.mobile.foodie_app.ui.fragment.onboarding.screen.OnboardingThirdFragment
+    import br.iesb.mobile.netflics.ui.adapter.OnboardingAdapter
+    import kotlinx.android.synthetic.main.fragment_on_boarding.*
 
 
     class OnBoardingFragment : Fragment() {
@@ -21,47 +23,47 @@
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
-        ): View? {
+        ): View {
 
             binding = FragmentOnBoardingBinding.inflate(inflater, container, false)
+            binding.fragment = this
             binding.lifecycleOwner = this
 
             //CRIAR A FONTE DE DADOS
 
-            val listaFragmentos = listOf(
+            val listaFragmentos = arrayListOf(
                     OnboardingFirstFragment(),
-                    OnboardingSecondFragment()
+                    OnboardingSecondFragment(),
+                    OnboardingThirdFragment()
             )
 
-            //CRIAR O ADAPTDADOR
-            val adaptador = AdapatadorParaConversarComVP(listaFragmentos,
-                requireActivity().supportFragmentManager,
-                lifecycle
-                )
+//            //CRIAR O ADAPTDADOR
+//            val adaptador = AdapatadorParaConversarComVP(listaFragmentos,
+//                requireActivity().supportFragmentManager,
+//                lifecycle
+//                )
 
-
-            binding.vpOnboarding
+            binding.vpOnboarding.adapter = OnboardingAdapter(
+                    listaFragmentos,
+                    requireActivity().supportFragmentManager,
+                    lifecycle
+            )
 
             return binding.root
         }
 
-        fun start() {
+        override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+            super.onViewCreated(view, savedInstanceState)
+
+            bt_onboarding.setOnClickListener {
+                findNavController().navigate(R.id.action_onBoardingFragment_to_loginFragment)
+            }
+
+        }
+
+        fun start(v: View) {
 
         }
 
     }
 
-
-    class AdapatadorParaConversarComVP (
-        val listaFragmentos: List<Fragment>,
-        fragmentManager: FragmentManager,
-        lifecycle: Lifecycle
-    ) : FragmentStateAdapter(FragmentManager, Lifecycle) {
-        override fun getItemCount(): Int {
-            return listaFragmentos.size
-        }
-
-        override fun createFragment(position: Int): Fragment {
-            return listaFragmentos[position]
-        }
-    }

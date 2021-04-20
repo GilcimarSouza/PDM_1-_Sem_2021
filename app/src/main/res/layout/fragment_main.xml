@@ -13,8 +13,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="visible"
-        tools:context=".ui.activity.antigos.MainActivity"
-        tools:visibility="visible">
+        tools:context=".ui.fragment.MainFragment"
+        tools:visibility="visible"
+        app:navGraph="@navigation/nav_graph"
+        app:defaultNavHost="true">
 
         <ImageView
             android:id="@+id/im_background_splash"
