@@ -13,4 +13,5 @@
     <color name="gray">#424242</color>
     <color name="transparent_white">#00FFFFFF</color>
     <color name="soft_blue">#BAFAF4</color>
+    <color name="yellow">#FFFFFF00</color>
 </resources>

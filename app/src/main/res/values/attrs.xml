@@ -3,6 +3,8 @@
 
     <attr format="color" name="corBotoesEspecial"></attr>
     <attr format="color" name="corBotoesComum"></attr>
+    <attr format="color" name="corTextoBotoesEspecial"></attr>
+    <attr format="color" name="corTextoBotoesComum"></attr>
 
     <attr format="color" name="hintColor"></attr>
     <attr format="color" name="titlesColor"></attr>
