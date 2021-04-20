@@ -8,27 +8,25 @@
 
    </data>
 
-<androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/guideline"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="?bgColor"
         android:visibility="visible"
-        tools:context=".ui.fragment.MainFragment"
-        tools:visibility="visible"
+        app:defaultNavHost="true"
         app:navGraph="@navigation/nav_graph"
-        app:defaultNavHost="true">
+        tools:context=".ui.fragment.MainFragment"
+        tools:visibility="visible">
 
         <ImageView
-            android:id="@+id/im_background_splash"
+            android:id="@+id/imageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:contentDescription="@string/desc_bg_splash"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0"
             app:srcCompat="@drawable/background_colors" />
 
         <ImageView
@@ -37,7 +35,7 @@
             android:layout_height="149dp"
             android:contentDescription="@string/desc_logo_splash"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/im_background_splash"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/logos" />
@@ -48,7 +46,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:text="@string/app_motto"
-            android:textColor="#FFFFFF"
+            android:textColor="?titlesColor"
             android:textSize="18sp"
             android:textStyle="bold|italic"
             app:layout_constraintBottom_toTopOf="@+id/guideline_splashscreen"

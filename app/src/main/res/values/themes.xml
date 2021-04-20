@@ -15,5 +15,8 @@
         <item name="corBotoesEspecial">@color/vermelho_legal</item>
         <item name="corBotoesComum">@color/purple_700</item>
         <item name="hintColor">@color/gray</item>
+
+        <item name="titlesColor">@color/black</item>
+        <item name="bgColor">@color/soft_blue</item>
     </style>
 </resources>

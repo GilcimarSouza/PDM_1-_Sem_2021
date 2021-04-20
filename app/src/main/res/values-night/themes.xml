@@ -15,5 +15,7 @@
         <item name="corBotoesEspecial">@color/teal_700</item>
         <item name="corBotoesComum">@color/gelo</item>
         <item name="hintColor">@color/white</item>
+        <item name="titlesColor">@color/white</item>
+        <item name="bgColor">@color/gray</item>
     </style>
 </resources>
