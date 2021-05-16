@@ -2,6 +2,7 @@ package br.iesb.mobile.foodie_app.ui.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Window
 import br.iesb.mobile.foodie_app.R
 
 class AppActivity : AppCompatActivity() {

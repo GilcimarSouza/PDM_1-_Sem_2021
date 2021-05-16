@@ -5,6 +5,17 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="br.iesb.mobile.foodie_app.ui.fragment.HomeFragment"
-        android:label="HomeFragment" />
+        android:name="br.iesb.mobile.foodie_app.ui.fragment.apprunning.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_topRecipesFragment"
+            app:destination="@id/topRecipesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_self"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/topRecipesFragment"
+        android:name="br.iesb.mobile.foodie_app.ui.fragment.apprunning.TopRecipesFragment"
+        android:label="TopRecipesFragment" />
 </navigation>

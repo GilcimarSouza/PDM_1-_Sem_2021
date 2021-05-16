@@ -1,4 +1,4 @@
-package br.iesb.mobile.foodie_app.ui.fragment
+package br.iesb.mobile.foodie_app.ui.fragment.apprunning
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

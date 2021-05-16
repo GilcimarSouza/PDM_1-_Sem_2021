@@ -45,7 +45,7 @@ class LoginFragment : Fragment() {
             val password = tv_password.text.toString()
 
             if (email.isBlank() || password.isBlank()) {
-                Toast.makeText(activity, "Erro ao efetuar login!", Toast.LENGTH_LONG).show()
+                Toast.makeText(activity, "Há campos em branco!", Toast.LENGTH_LONG).show()
             } else {
                 val auth = FirebaseAuth.getInstance()
 
@@ -56,7 +56,7 @@ class LoginFragment : Fragment() {
                         startActivity(Intent(activity, AppActivity::class.java))
                         //activity?.finish()
                     } else {
-                        Toast.makeText(activity, "Erro ao efetuar login!", Toast.LENGTH_LONG).show()
+                        Toast.makeText(activity, "Usuário ou senha incorretos!", Toast.LENGTH_LONG).show()
                     }
                 }
             }

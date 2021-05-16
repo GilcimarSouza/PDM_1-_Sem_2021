@@ -11,19 +11,57 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.fragment.HomeFragment">
+        android:background="?bgColor"
+        tools:context=".ui.fragment.apprunning.HomeFragment">
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="PARABÉNS, VOCÊ ALCANÇOU A HOME"
-            android:textAlignment="center"
-            android:textSize="36sp"
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/Linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <fragment
+                    android:id="@+id/fragment5"
+                    android:name="br.iesb.mobile.foodie_app.ui.components.ViewReceitaFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <fragment
+                    android:id="@+id/fragment"
+                    android:name="br.iesb.mobile.foodie_app.ui.components.ViewReceitaFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <fragment
+                    android:id="@+id/fragment7"
+                    android:name="br.iesb.mobile.foodie_app.ui.components.ViewReceitaFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <fragment
+                    android:id="@+id/fragment8"
+                    android:name="br.iesb.mobile.foodie_app.ui.components.ViewReceitaFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </ScrollView>
+
+        <fragment
+            android:id="@+id/fragment6"
+            android:name="br.iesb.mobile.foodie_app.ui.components.NavBarFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

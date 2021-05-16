@@ -49,4 +49,8 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+
+    <!--  STRINGS DO VIEW DE RECEITAS  -->
+    <string name="receita_title">Pão Frances com ovo!</string>
+    <string name="body_receita">Aqui estará o corpo da receita</string>
 </resources>
