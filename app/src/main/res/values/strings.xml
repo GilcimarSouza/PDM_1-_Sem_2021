@@ -52,5 +52,5 @@
 
     <!--  STRINGS DO VIEW DE RECEITAS  -->
     <string name="receita_title">Pão Frances com ovo!</string>
-    <string name="body_receita">Aqui estará o corpo da receita</string>
+    <string name="body_receita">Aqui estará um resumo do corpo da receita</string>
 </resources>
