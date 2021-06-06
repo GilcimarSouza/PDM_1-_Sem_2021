@@ -14,15 +14,35 @@
         android:background="?bgColor"
         tools:context=".ui.fragment.apprunning.HomeFragment">
 
-        <ScrollView
+        <TextView
+            android:id="@+id/tv_home_title"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/home"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/divider4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_home_title" />
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0">
+            app:layout_constraintTop_toBottomOf="@+id/divider4">
 
             <LinearLayout
                 android:id="@+id/Linear"
@@ -57,7 +77,7 @@
         </ScrollView>
 
         <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/fragment6"
+            android:id="@+id/nav_bar_home"
             android:name="br.iesb.mobile.foodie_app.ui.components.NavBarFragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

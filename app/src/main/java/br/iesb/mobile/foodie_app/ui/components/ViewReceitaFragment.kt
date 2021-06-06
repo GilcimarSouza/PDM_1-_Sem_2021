@@ -22,8 +22,5 @@ class ViewReceitaFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        iv_pao.setOnClickListener {
-            findNavController().navigate(R.id.action_homeFragment_to_topRecipesFragment)
-        }
     }
 }

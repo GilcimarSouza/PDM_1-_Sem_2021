@@ -6,26 +6,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import br.iesb.mobile.foodie_app.R
-import br.iesb.mobile.foodie_app.databinding.FragmentHomeBinding
 
-class HomeFragment : Fragment() {
+// TODO: Rename parameter arguments, choose names that match
 
-    private lateinit var binding:FragmentHomeBinding
+class ChatBotFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
+    ): View? {
         // Inflate the layout for this fragment
-        binding = FragmentHomeBinding.inflate(inflater, container, false)
-        binding.lifecycleOwner = this
-
-        return binding.root
+        return inflater.inflate(R.layout.fragment_chat_bot, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
     }
-
 }

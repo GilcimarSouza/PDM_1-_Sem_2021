@@ -14,12 +14,13 @@ import br.iesb.mobile.foodie_app.ui.activity.AppActivity
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.fragment_login.*
+import kotlinx.android.synthetic.main.fragment_main.*
 
 
 class LoginFragment : Fragment() {
 
     private lateinit var binding:FragmentLoginBinding
-
+    var temp = 0
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -67,6 +68,21 @@ class LoginFragment : Fragment() {
             //startActivity(Intent(this, ResetpasswordActivity::class.java))
             findNavController().navigate(R.id.action_loginFragment_to_forgotFragment)
         }
+
+
+
+        im_logo_login.setOnClickListener {
+            if(temp != 3) {
+                temp++
+            } else {
+                startActivity(Intent(activity, AppActivity::class.java))
+            }
+        }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        temp = 0
     }
 
 

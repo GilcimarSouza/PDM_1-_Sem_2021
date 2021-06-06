@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_app"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_app"
     app:startDestination="@id/homeFragment">
 
     <fragment
@@ -13,9 +15,54 @@
         <action
             android:id="@+id/action_homeFragment_self"
             app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_chatBotFragment"
+            app:destination="@id/chatBotFragment" />
     </fragment>
     <fragment
         android:id="@+id/topRecipesFragment"
         android:name="br.iesb.mobile.foodie_app.ui.fragment.apprunning.TopRecipesFragment"
-        android:label="TopRecipesFragment" />
+        android:label="TopRecipesFragment" >
+        <action
+            android:id="@+id/action_topRecipesFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_topRecipesFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_topRecipesFragment_to_chatBotFragment"
+            app:destination="@id/chatBotFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="br.iesb.mobile.foodie_app.ui.fragment.apprunning.ProfileFragment"
+        android:label="ProfileFragment" >
+        <action
+            android:id="@+id/action_profileFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_topRecipesFragment"
+            app:destination="@id/topRecipesFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_chatBotFragment"
+            app:destination="@id/chatBotFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatBotFragment"
+        android:name="br.iesb.mobile.foodie_app.ui.fragment.apprunning.ChatBotFragment"
+        android:label="fragment_chat_bot"
+        tools:layout="@layout/fragment_chat_bot" >
+        <action
+            android:id="@+id/action_chatBotFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_chatBotFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_chatBotFragment_to_topRecipesFragment"
+            app:destination="@id/topRecipesFragment" />
+    </fragment>
 </navigation>

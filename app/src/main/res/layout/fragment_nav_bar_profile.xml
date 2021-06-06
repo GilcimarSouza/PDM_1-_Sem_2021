@@ -9,39 +9,17 @@
     tools:context=".ui.components.NavBarFragment" >
 
     <ImageView
-        android:id="@+id/icon_bot"
+        android:id="@+id/icon_profile_profile"
         android:layout_width="35dp"
         android:layout_height="35dp"
-        android:scaleType="center"
-        android:src="@drawable/ic_launcher_foreground"
+        android:src="@drawable/profile"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/icon_new_post"
-        app:layout_constraintStart_toEndOf="@+id/icon_timeline"
+        app:layout_constraintEnd_toStartOf="@+id/icon_top_recipes_profile"
+        app:layout_constraintStart_toEndOf="@+id/icon_new_post_profile"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/icon_new_post"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:scaleType="fitCenter"
-        android:src="@android:drawable/ic_menu_camera"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/icon_top_recipes"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginEnd="20dp"
-        android:src="@android:drawable/ic_dialog_dialer"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/icon_timeline"
+        android:id="@+id/icon_timeline_profile"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_marginStart="20dp"
@@ -51,13 +29,33 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/icon_profile"
+        android:id="@+id/icon_bot_profile"
         android:layout_width="35dp"
         android:layout_height="35dp"
-        android:src="@drawable/profile"
+        android:scaleType="center"
+        android:src="@drawable/ic_launcher_foreground"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/icon_top_recipes"
-        app:layout_constraintStart_toEndOf="@+id/icon_new_post"
+        app:layout_constraintEnd_toStartOf="@+id/icon_new_post_profile"
+        app:layout_constraintStart_toEndOf="@+id/icon_timeline_profile"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/icon_new_post_profile"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@android:drawable/ic_menu_camera"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/icon_top_recipes_profile"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="20dp"
+        android:src="@android:drawable/ic_dialog_dialer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

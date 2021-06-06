@@ -50,7 +50,22 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
+    <!-- STINGS DA TELA HOME -->
+    <string name="home">Timeline</string>
+
+    <!-- STRINGS DA TELA DE TOP RECEITAS -->
+    <string name="top_title">Top Receitas do Dia</string>
+
     <!--  STRINGS DO VIEW DE RECEITAS  -->
     <string name="receita_title">Pão Frances com ovo!</string>
     <string name="body_receita">Aqui estará um resumo do corpo da receita</string>
+
+    <!-- STRINGS DO CHATBOT -->
+    <string name="hint_campo_busca">Pesquise algo!</string>
+    <string name="chatbot_title">Bem-Vindo ao ChatBot!</string>
+    <string name="button_buscar">Buscar!</string>
+
+    <!-- STRINGS DA TELA DE PERFIL -->
+    <string name="nome_usuario">Fulano de Tal</string>
+    <string name="info_usuario">Aqui estarão informações sobre o usuário</string>
 </resources>
