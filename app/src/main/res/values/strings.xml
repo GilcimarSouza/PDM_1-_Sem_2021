@@ -79,6 +79,6 @@
     <string name="full_recipe_body">Corpo da Receita virá aqui! (Ingredientes + Modo de Preparo)</string>
 
     <!-- STRINGS DA TELA DE PERFIL -->
-    <string name="nome_usuario">Fulano de Tal</string>
+    <string name="nome_usuario">Bread Pitt</string>
     <string name="info_usuario">Aqui estarão informações sobre o usuário</string>
 </resources>
