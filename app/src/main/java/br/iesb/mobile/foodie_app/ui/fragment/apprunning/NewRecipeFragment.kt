@@ -11,6 +11,7 @@ import androidx.navigation.fragment.findNavController
 import br.iesb.mobile.foodie_app.R
 import br.iesb.mobile.foodie_app.databinding.FragmentNewRecipeBinding
 import br.iesb.mobile.foodie_app.databinding.FragmentTopRecipesBinding
+import br.iesb.mobile.foodie_app.ui.adapter.CurrentFragmentAdapter
 import kotlinx.android.synthetic.main.fragment_new_recipe.*
 
 class NewRecipeFragment : Fragment() {
@@ -22,6 +23,7 @@ class NewRecipeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
+        CurrentFragmentAdapter.setCurrentFragment("new")
         binding = FragmentNewRecipeBinding.inflate(inflater, container, false)
         binding.lifecycleOwner = this
 
@@ -41,6 +43,11 @@ class NewRecipeFragment : Fragment() {
             }
         }
 
+    }
+
+    override fun onResume() {
+        super.onResume()
+        CurrentFragmentAdapter.setCurrentFragment("new")
     }
 
 }

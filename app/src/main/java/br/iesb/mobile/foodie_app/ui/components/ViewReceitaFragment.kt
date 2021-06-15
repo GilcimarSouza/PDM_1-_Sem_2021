@@ -7,11 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import br.iesb.mobile.foodie_app.R
+import br.iesb.mobile.foodie_app.ui.adapter.CurrentFragmentAdapter
 import kotlinx.android.synthetic.main.fragment_view_receita.*
 
 
 class ViewReceitaFragment : Fragment() {
 
+    private lateinit var temp : String
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -21,9 +23,20 @@ class ViewReceitaFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        temp=CurrentFragmentAdapter.getCurrentFragment()
+
 
         iv_pao.setOnClickListener {
-            findNavController().navigate(R.id.action_homeFragment_to_fullRecipeFragment)
+            if(temp.equals("home")) {
+                findNavController().navigate(R.id.action_homeFragment_to_fullRecipeFragment)
+            }
+            if(temp.equals("profile")){
+                findNavController().navigate(R.id.action_profileFragment_to_fullRecipeFragment)
+            }
+            if(temp.equals("top")) {
+                findNavController().navigate(R.id.action_topRecipesFragment_to_fullRecipeFragment)
+            }
+
         }
 
     }

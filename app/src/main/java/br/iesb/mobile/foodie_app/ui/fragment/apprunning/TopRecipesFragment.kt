@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import br.iesb.mobile.foodie_app.R
 import br.iesb.mobile.foodie_app.databinding.FragmentTopRecipesBinding
+import br.iesb.mobile.foodie_app.ui.adapter.CurrentFragmentAdapter
 
 class TopRecipesFragment : Fragment() {
 
@@ -17,6 +18,7 @@ class TopRecipesFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
+        CurrentFragmentAdapter.setCurrentFragment("top")
         binding = FragmentTopRecipesBinding.inflate(inflater, container, false)
         binding.lifecycleOwner = this
 
@@ -24,5 +26,9 @@ class TopRecipesFragment : Fragment() {
         return binding.root
     }
 
+    override fun onResume() {
+        super.onResume()
+        CurrentFragmentAdapter.setCurrentFragment("top")
+    }
 
 }

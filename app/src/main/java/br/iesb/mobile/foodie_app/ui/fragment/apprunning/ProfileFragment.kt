@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import br.iesb.mobile.foodie_app.R
 import br.iesb.mobile.foodie_app.databinding.FragmentProfileBinding
+import br.iesb.mobile.foodie_app.ui.adapter.CurrentFragmentAdapter
 
 
 class ProfileFragment : Fragment() {
@@ -16,6 +17,8 @@ class ProfileFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
+
+        CurrentFragmentAdapter.setCurrentFragment("profile")
         binding = FragmentProfileBinding.inflate(inflater, container, false)
         binding.lifecycleOwner = this
         return binding.root
@@ -25,4 +28,8 @@ class ProfileFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
     }
 
+    override fun onResume() {
+        super.onResume()
+        CurrentFragmentAdapter.setCurrentFragment("profile")
+    }
 }
