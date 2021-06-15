@@ -22,6 +22,7 @@
         android:id="@+id/iv_user_avatar"
         android:layout_width="133dp"
         android:layout_height="136dp"
+        android:layout_marginTop="8dp"
         android:adjustViewBounds="false"
         android:cropToPadding="false"
         android:scaleType="centerInside"

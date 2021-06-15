@@ -24,6 +24,9 @@
         <action
             android:id="@+id/action_homeFragment_to_newRecipeFragment"
             app:destination="@id/newRecipeFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_fullRecipeFragment"
+            app:destination="@id/fullRecipeFragment" />
     </fragment>
     <fragment
         android:id="@+id/topRecipesFragment"
@@ -41,6 +44,9 @@
         <action
             android:id="@+id/action_topRecipesFragment_to_newRecipeFragment"
             app:destination="@id/newRecipeFragment" />
+        <action
+            android:id="@+id/action_topRecipesFragment_to_fullRecipeFragment"
+            app:destination="@id/fullRecipeFragment" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
@@ -58,6 +64,9 @@
         <action
             android:id="@+id/action_profileFragment_to_newRecipeFragment"
             app:destination="@id/newRecipeFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_fullRecipeFragment"
+            app:destination="@id/fullRecipeFragment" />
     </fragment>
     <fragment
         android:id="@+id/chatBotFragment"
@@ -97,4 +106,8 @@
             android:id="@+id/action_newRecipeFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/fullRecipeFragment"
+        android:name="br.iesb.mobile.foodie_app.ui.components.FullRecipeFragment"
+        android:label="FullRecipeFragment" />
 </navigation>

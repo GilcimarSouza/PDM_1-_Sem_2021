@@ -74,6 +74,10 @@
     <string name="button_pics_new_recipe">Adicionar Fotos</string>
     <string name="button_ok_new_recipe">OK!</string>
 
+    <!-- STRINGS FULL RECIPE -->
+    <string name="full_recipe_title">Pão francês com ovo!</string>
+    <string name="full_recipe_body">Corpo da Receita virá aqui! (Ingredientes + Modo de Preparo)</string>
+
     <!-- STRINGS DA TELA DE PERFIL -->
     <string name="nome_usuario">Fulano de Tal</string>
     <string name="info_usuario">Aqui estarão informações sobre o usuário</string>
