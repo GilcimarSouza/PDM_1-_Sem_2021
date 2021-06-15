@@ -75,7 +75,7 @@
     <string name="button_ok_new_recipe">OK!</string>
 
     <!-- STRINGS FULL RECIPE -->
-    <string name="full_recipe_title">Pão francês com ovo!</string>
+    <string name="full_recipe_title">Exemplo de receita!</string>
     <string name="full_recipe_body">Corpo da Receita virá aqui! (Ingredientes + Modo de Preparo)</string>
 
     <!-- STRINGS DA TELA DE PERFIL -->
