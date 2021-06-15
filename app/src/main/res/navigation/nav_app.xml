@@ -21,6 +21,9 @@
         <action
             android:id="@+id/action_homeFragment_to_chatBotFragment"
             app:destination="@id/chatBotFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_newRecipeFragment"
+            app:destination="@id/newRecipeFragment" />
     </fragment>
     <fragment
         android:id="@+id/topRecipesFragment"
@@ -35,6 +38,9 @@
         <action
             android:id="@+id/action_topRecipesFragment_to_chatBotFragment"
             app:destination="@id/chatBotFragment" />
+        <action
+            android:id="@+id/action_topRecipesFragment_to_newRecipeFragment"
+            app:destination="@id/newRecipeFragment" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
@@ -49,6 +55,9 @@
         <action
             android:id="@+id/action_profileFragment_to_chatBotFragment"
             app:destination="@id/chatBotFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_newRecipeFragment"
+            app:destination="@id/newRecipeFragment" />
     </fragment>
     <fragment
         android:id="@+id/chatBotFragment"
@@ -64,5 +73,28 @@
         <action
             android:id="@+id/action_chatBotFragment_to_topRecipesFragment"
             app:destination="@id/topRecipesFragment" />
+        <action
+            android:id="@+id/action_chatBotFragment_to_newRecipeFragment"
+            app:destination="@id/newRecipeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newRecipeFragment"
+        android:name="br.iesb.mobile.foodie_app.ui.fragment.apprunning.NewRecipeFragment"
+        android:label="NewRecipeFragment" >
+        <action
+            android:id="@+id/action_newRecipeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_newRecipeFragment_to_profileFragment2"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_newRecipeFragment_to_topRecipesFragment"
+            app:destination="@id/topRecipesFragment" />
+        <action
+            android:id="@+id/action_newRecipeFragment_to_chatBotFragment"
+            app:destination="@id/chatBotFragment" />
+        <action
+            android:id="@+id/action_newRecipeFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
 </navigation>

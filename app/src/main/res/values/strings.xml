@@ -59,11 +59,20 @@
     <!--  STRINGS DO VIEW DE RECEITAS  -->
     <string name="receita_title">Pão Frances com ovo!</string>
     <string name="body_receita">Aqui estará um resumo do corpo da receita</string>
+    <string name="username">Fulano de Tal</string>
 
     <!-- STRINGS DO CHATBOT -->
     <string name="hint_campo_busca">Pesquise algo!</string>
     <string name="chatbot_title">Bem-Vindo ao ChatBot!</string>
     <string name="button_buscar">Buscar!</string>
+
+    <!-- STRINGS NEW RECIPE -->
+    <string name="new_recipe_title">Nova Receita</string>
+    <string name="new_recipe_description">Descrição da receita</string>
+    <string name="new_recipe_ingredients">Ingredientes</string>
+    <string name="new_recipe_preparo">Modo de preparo</string>
+    <string name="button_pics_new_recipe">Adicionar Fotos</string>
+    <string name="button_ok_new_recipe">OK!</string>
 
     <!-- STRINGS DA TELA DE PERFIL -->
     <string name="nome_usuario">Fulano de Tal</string>

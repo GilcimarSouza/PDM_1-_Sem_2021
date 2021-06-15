@@ -9,8 +9,9 @@
 
     <ImageView
         android:id="@+id/iv_pao"
-        android:layout_width="wrap_content"
-        android:layout_height="240dp"
+        android:layout_width="0dp"
+        android:layout_height="341dp"
+        android:layout_marginTop="108dp"
         android:scaleType="centerCrop"
         android:src="@drawable/food_display"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,22 +33,13 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="173dp"
-        android:layout_height="130dp"
+        android:layout_width="181dp"
+        android:layout_height="80dp"
         android:text="@string/body_receita"
         android:textAlignment="gravity"
-        app:layout_constraintBottom_toTopOf="@+id/divider2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.239"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <View
-        android:id="@+id/divider2"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="?android:attr/listDivider"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.239"
         app:layout_constraintStart_toStartOf="parent" />
 
     <View
@@ -67,4 +59,47 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iv_pao" />
+
+    <View
+        android:id="@+id/divider6"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toTopOf="@+id/iv_pao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/user_avatar_recipe"
+        android:layout_width="84dp"
+        android:layout_height="63dp"
+        android:layout_marginBottom="13dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/brad"
+        app:layout_constraintBottom_toTopOf="@+id/divider6"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/username_recipe"
+        android:layout_width="119dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="28dp"
+        android:gravity="center"
+        android:text="@string/username"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/divider6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.067"
+        app:layout_constraintStart_toEndOf="@+id/user_avatar_recipe" />
+
+    <View
+        android:id="@+id/divider7"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="30dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

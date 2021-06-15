@@ -32,6 +32,10 @@ class NavBarFragment : Fragment() {
         icon_bot.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_chatBotFragment)
         }
+
+        icon_new_post.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_newRecipeFragment)
+        }
     }
 
 }
